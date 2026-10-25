@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 🧪 Pruebas de API REST & QA (Postman)
+
+El proyecto cuenta con una suite de pruebas para la API REST de Supabase alojada en la carpeta `/postman`.
+
+### Peticiones Incluidas
+* **`GET /rest/v1/tickets`**: Consulta e inspección de tickets guardados (sincronizados con la app web).
+* **`POST /rest/v1/tickets`**: Inserción de nuevos tickets con validación de clave foránea (`client_id`).
+* **`GET /rest/v1/profiles`**: Consulta de usuarios para garantizar la integridad relacional de la base de datos.
+
+### Cómo importar en Postman
+1. Abre **Postman**.
+2. Haz clic en **Import** (esquina superior izquierda).
+3. Selecciona el archivo `postman/HelpDesk_QA_API.postman_collection.json`.
+4. Configura los Headers `apikey` y `Authorization` (Bearer token) con tus credenciales de Supabase.

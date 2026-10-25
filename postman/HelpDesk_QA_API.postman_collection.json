@@ -1,0 +1,72 @@
+{
+  "info": {
+    "_postman_id": "45936467-8e7f-4bba-ab08-76ed32ecdf6e",
+    "name": "HelpDesk_QA_API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24122445",
+    "_collection_link": "https://go.postman.co/collection/24122445-45936467-8e7f-4bba-ab08-76ed32ecdf6e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Obtener Tickets (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Ticket (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "apikey",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhid2ptaXR5a215bXR6amZjZ2JzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1NTQ3NjYsImV4cCI6MjEwODEzMDc2Nn0.Mb9oJV0V5DGjYdMFcCXknzRz5cc-XlEELbdgAwlOzM0"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{bearer_token_0g45}}"
+          },
+          {
+            "key": "",
+            "value": "return=representation"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Prueba de Inserción desde Postman QA\",\r\n  \"description\": \"Ticket de prueba para validación de API REST\",\r\n  \"priority\": \"urgent\",\r\n  \"category\": \"Redes / Wi-Fi\",\r\n  \"status\": \"open\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://hbwjmitykmymtzjfcgbs.supabase.co/rest/v1/tickets",
+          "protocol": "https",
+          "host": [
+            "hbwjmitykmymtzjfcgbs",
+            "supabase",
+            "co"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "tickets"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "bearer_token_0g45",
+      "secret": true
+    }
+  ]
+}
